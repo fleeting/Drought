@@ -62,7 +62,7 @@ nav ul li a:link, nav ul li a:visited, nav ul li a:active {
 	text-decoration: none;
 }
 
-nav ul li a:first-child {
+nav ul li:first-child a {
 	margin-left: 0;
 }
 
