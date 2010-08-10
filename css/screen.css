@@ -1,20 +1,20 @@
 html, body {
 	background: #fff url(../images/12_col.gif) repeat-y fixed top center;
+	-webkit-font-smoothing: antialiased;
 }
 
-body { 
-	font: 62.5% "Arial", Verdana, sans-serif; 
-	color: #333; 
-	text-align: center; 
+body {
+	font: 62.5% "Arial", Verdana, sans-serif;
+	color: #333;
+	text-align: center;
 }
 
 header, article, section, aside, footer {
 	display: block;
 }
 
-
-#wrapper { 
-	width: 960px; 
+#wrapper {
+	width: 960px;
 	margin: 0 auto;
 	padding: 0 10px;
 	text-align: left;
@@ -33,6 +33,10 @@ header h1 a:link, header h1 a:active, header h1 a:visited {
 	font-size: 4.0em;
 	color: #;
 	text-decoration: none;
+}
+
+header h1 a:focus {
+	outline: thin dotted;
 }
 
 header h1 a:hover {
@@ -66,6 +70,10 @@ nav ul li:first-child a {
 	margin-left: 0;
 }
 
+nav ul li a:focus {
+	outline: thin dotted;
+}
+
 nav ul li a:hover {
 	color: #;
 	text-decoration: underline;
@@ -88,6 +96,10 @@ nav ul li a:hover {
 .content a:link, .content a:visited, .content a:active {
 	color: #;
 	text-decoration: none;
+}
+
+.content a:focus {
+	outline: thin dotted;
 }
 
 .content a:hover {
@@ -186,6 +198,10 @@ aside a:link, aside a:visited, aside a:active {
 	color: #;
 	text-decoration: none;
 	border-bottom: 1px solid #;
+}
+
+aside a:focus {
+	outline: thin dotted;
 }
 
 aside a:hover {
@@ -287,6 +303,10 @@ footer a:link, footer a:visited, footer a:active {
 	text-decoration: none;
 }
 
+footer a:focus {
+	outline: thin dotted;
+}
+
 footer a:hover {
 	color: #;
 	text-decoration: underline;
@@ -300,16 +320,114 @@ footer a:hover {
 	clear: both;
 	margin: 0;
 	padding: 0;
+	height: 0;
+}
+
+/* Hide from browsers & screenreaders */
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+/* Hide from browsers, available to screenreaders */
+.visuallyHidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Hide from browsers & screenreaders, maintain layout */
+.invisible { 
+	visibility: hidden;
 }
 
 .left {
 	float: left;
-	display: inline;
 }
 
 .right {
 	float: right;
-	display: inline;
 }
 
+::-moz-selection {
+	background: #62aaf2;
+	color:#fff;
+	text-shadow: none;
+}
+
+::selection {
+	background:#62aaf2;
+	color:#fff;
+	text-shadow: none;
+} 
+
 /* @end */
+
+@media print {
+
+	* {
+		background: transparent !important;
+		color: #444 !important;
+		text-shadow: none;
+	}
+	
+	a, a:visited {
+		color: #444 !important;
+		text-decoration: underline;
+	}
+	
+	a:after {
+		content: " (" attr(href) ")";
+	}
+	
+	abbr:after {
+		content: " (" attr(title) ")";
+	}
+	
+	.ir a:after {
+		content: "";
+	}
+	
+	/* Don't show links for images */
+	
+	pre, blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	
+	img {
+		page-break-inside: avoid;
+	}
+	
+	@page { margin: 0.5cm; }
+	
+	p, h2, h3 {
+		orphans: 3;
+		widows: 3;
+	}
+	
+	h2, h3 {
+		page-break-after: avoid;
+	}
+
+}
+
+@media all and (orientation:portrait) {
+
+}
+
+@media all and (orientation:landscape) {
+
+}
+
+@media screen and (max-device-width: 480px) {
+	
+	a:link { -webkit-tap-highlight-color: #; } 
+	
+	/* Prevent iOS, WinMobile from adjusting font size */
+	html {
+		-webkit-text-size-adjust: none;
+		-ms-text-size-adjust: none;
+	}
+
+}
