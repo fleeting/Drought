@@ -56,7 +56,6 @@ input, select { vertical-align:middle; }
 
 html, body {
 	background: #fff url(../images/12_col.gif) repeat-y fixed top center;
-	-webkit-font-smoothing: antialiased;
 }
 
 body {
