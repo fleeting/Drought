@@ -154,7 +154,7 @@ nav ul li a:hover {
 	margin-left: 10px;
 }
 
-.content a:link, .content a:visited, .content a:active {
+.content a:link, .content a:active, .content a:visited {
 	color: #;
 	text-decoration: none;
 }
@@ -208,17 +208,6 @@ nav ul li a:hover {
 	line-height: 1.4em;
 }
 
-.content p a:link, .content p a:visited, .content p a:active, .content li a:link, .content li a:visited, .content li a:active {
-	color: #;
-	text-decoration: none;
-	border-bottom: 1px solid #;
-}
-
-.content p a:hover, .content li a:hover {
-	color: #;
-	border-bottom: 1px solid #;
-}
-
 .content ul {
 	margin: 0 0 15px 30px;
 }
@@ -259,10 +248,9 @@ aside {
 	margin-right: 10px;
 }
 
-aside a:link, aside a:visited, aside a:active {
+aside a:link, aside a:active, aside a:visited {
 	color: #;
 	text-decoration: none;
-	border-bottom: 1px solid #;
 }
 
 aside a:focus {
@@ -271,7 +259,7 @@ aside a:focus {
 
 aside a:hover {
 	color: #;
-	border-bottom: 1px solid #;
+	text-decoration: underline;
 }
 
 aside h2 {
@@ -314,17 +302,6 @@ aside p, aside blockquote {
 	line-height: 1.4em;
 }
 
-aside p a:link, aside p a:visited, aside p a:active, aside li a:link, aside li a:visited, aside li a:active {
-	color: #;
-	text-decoration: none;
-	border-bottom: 1px solid #;
-}
-
-aside p a:hover, aside li a:hover {
-	color: #;
-	border-bottom: 1px solid #;
-}
-
 aside ul {
 	margin: 0 0 15px 30px;
 }
@@ -346,6 +323,10 @@ aside li {
 	margin-bottom: 5px;
 	font-size: 1.3em;
 	line-height: 1.4em;
+}
+
+aside li li {
+	font-size: 1em;
 }
 
 /* @end */
@@ -383,7 +364,7 @@ footer p {
 	color: #666;
 }
 
-footer a:link, footer a:visited, footer a:active {
+footer a:link, footer a:active, footer a:visited {
 	color: #;
 	text-decoration: none;
 }
