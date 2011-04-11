@@ -351,7 +351,7 @@ footer {
 	clear: both;
 	float: left;
 	display: inline;
-	margin: 25px 10px;
+	margin: 25px 0;
 }
 
 footer p {
@@ -466,14 +466,14 @@ pre {
 
 @media print {
 	* {background: transparent !important; color: #444 !important; text-shadow: none !important;}
-  a, a:visited {color: #444 !important; text-decoration: underline;}
-  a:after {content: " (" attr(href) ")";} 
-  abbr:after {content: " (" attr(title) ")";}
-  .ir a:after {content: "";}  /* Don't show links for images */
-  pre, blockquote {border: 1px solid #999; page-break-inside: avoid;}
-  thead {display: table-header-group;} /* css-discuss.incutio.com/wiki/Printing_Tables */ 
-  tr, img {page-break-inside: avoid;}
-  @page {margin: 0.5cm;}
-  p, h2, h3 {orphans: 3; widows: 3;}
-  h2, h3{page-break-after: avoid;}
+	a, a:visited {color: #444 !important; text-decoration: underline;}
+	a:after {content: " (" attr(href) ")";} 
+	abbr:after {content: " (" attr(title) ")";}
+	.ir a:after {content: "";}  /* Don't show links for images */
+	pre, blockquote {border: 1px solid #999; page-break-inside: avoid;}
+	thead {display: table-header-group;} /* css-discuss.incutio.com/wiki/Printing_Tables */ 
+	tr, img {page-break-inside: avoid;}
+	@page {margin: 0.5cm;}
+	p, h2, h3 {orphans: 3; widows: 3;}
+	h2, h3{page-break-after: avoid;}
 }
