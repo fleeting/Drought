@@ -58,10 +58,6 @@ body {
 	text-align: center;
 }
 
-header, article, section, aside, footer {
-	display: block;
-}
-
 #wrapper {
 	width: 960px;
 	margin: 0 auto;
