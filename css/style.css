@@ -50,45 +50,40 @@ table {
 
 /* @group structure */
 
-html, body {
-	background: #fff url(../images/12_col.gif) repeat-y fixed top center;
+html {
+	overflow-y: scroll;
 }
 
 body {
+	background: #fff url(../images/12_col.gif) repeat-y fixed top center;
 	font: 62.5% "Arial", Verdana, sans-serif;
 	color: #333;
-	text-align: center;
-}
-
-#wrapper {
+	text-align: left;
 	width: 960px;
 	margin: 0 auto;
-	padding: 0;
-	text-align: left;
-	overflow: hidden;
 }
 
 /* @end */
 
 /* @group header */
 
-header {
+[role="banner"] {
 	width: 100%;
 	height: px;
 	margin: 35px 0;
 }
 
-header h1 a:link, header h1 a:active, header h1 a:visited {
+[role="banner"] h1 a:link, [role="banner"] h1 a:active, [role="banner"] h1 a:visited {
 	font-size: 4.0em;
 	color: #;
 	text-decoration: none;
 }
 
-header h1 a:focus {
+[role="banner"] h1 a:focus {
 	outline: thin dotted;
 }
 
-header h1 a:hover {
+[role="banner"] h1 a:hover {
 	color: #;
 	text-decoration: underline;
 }
@@ -138,7 +133,7 @@ nav ul li a:hover {
 
 /* @group content */
 
-#content {
+[role="main"] {
 	float: left;
 	display: inline;
 	width: 620px;
@@ -146,84 +141,75 @@ nav ul li a:hover {
 	margin-left: 10px;
 }
 
-.content a:link, .content a:active, .content a:visited {
+.main a:link, .main a:active, .main a:visited {
 	color: #;
 	text-decoration: none;
 }
 
-.content a:focus {
+.main a:focus {
 	outline: thin dotted;
 }
 
-.content a:hover {
+.main a:hover {
 	color: #;
 	text-decoration: underline;
 }
 
-.content h2 {
-	margin: 0 0 15px;
-	font-size: 3.5em;
-	color: #;
-}
-
-.content h3 {
-	margin: 25px 0 15px;
+.main .huge, .main h2 {
 	font-size: 3.0em;
-	font-weight: bold;
-	color: #;
-}
+	padding: 5px 0 10px;
+} 
 
-.content h4 {
-	margin: 25px 0 15px;
+.main .large, .main h3 {
 	font-size: 2.6em;
-	font-weight: bold;
-	color: #;
+	padding: 5px 0 10px;
+} 
+
+.main .bigger, .main h4 {
+	font-size: 2.2em;
+	padding: 5px 0 10px;
 }
 
-.content h5 {
-	margin: 25px 0 15px;
-	font-size: 2.1em;
-	font-weight: bold;
-	color: #;
+.main h5 {
+	font-size: 1.9em;
+	padding: 5px 0 8px;
 }
 
-.content h6 {
-	margin: 25px 0 15px;
-	font-size: 1.7em;
-	font-weight: bold;
-	color: #;
+.main h6 {
+	font-size: 1.6em;
+	padding: 5px 0 8px;
 }
 
-.content p, .content blockquote {
+.main p, .main blockquote {
 	margin-bottom: 20px;
-	font-size: 1.3em;
+	font-size: 1.4em;
 	line-height: 1.4em;
 }
 
-.content ul {
+.main ul {
 	margin: 0 0 15px 30px;
 }
 
-.content ul li {
+.main ul li {
 	list-style-type: square;
 }
 
-.content ol {
+.main ol {
 	margin: 0 0 15px 30px;
 	list-style-type: decimal;
 }
 
-.content ol li {
+.main ol li {
 	list-style-type: decimal;
 }
 
-.content li {
+.main li {
 	margin-bottom: 5px;
 	font-size: 1.3em;
 	line-height: 1.4em;
 }
 
-.content li li {
+.main li li {
 	font-size: 1em;
 }
 
@@ -231,7 +217,7 @@ nav ul li a:hover {
 
 /* @group sidebar */
 
-aside {
+[role="complementary"] {
 	float: right;
 	display: inline;
 	width: 300px;
@@ -255,37 +241,28 @@ aside a:hover {
 }
 
 aside h2 {
-	margin-bottom: 1em;
-	font-size: 1.8em;
-	color: #;
-}
+	font-size: 2.3em;
+	padding: 5px 0 10px;
+} 
 
 aside h3 {
-	margin-bottom: 1em;
-	font-size: 1.5em;
-	font-weight: bold;
-	color: #;
-}
+	font-size: 2.0em;
+	padding: 5px 0 8px;
+} 
 
 aside h4 {
-	margin-bottom: 1em;
-	font-size: 1.4em;
-	font-weight: bold;
-	color: #;
+	font-size: 1.7em;
+	padding: 5px 0 8px;
 }
 
 aside h5 {
-	margin-bottom: 1em;
-	font-size: 1.3em;
-	font-weight: bold;
-	color: #;
+	font-size: 1.5em;
+	padding: 5px 0 8px;
 }
 
 aside h6 {
-	margin-bottom: 1em;
 	font-size: 1.2em;
-	font-weight: bold;
-	color: #;
+	padding: 5px 0 8px;
 }
 
 aside p, aside blockquote {
@@ -345,27 +322,28 @@ input[type="checkbox"] {
 
 /* @group footer */
 
-footer {
+footer[role="contentinfo"] {
 	clear: both;
 	float: left;
 	display: inline;
 	margin: 25px 0;
 }
 
-footer p {
+footer[role="contentinfo"] p {
 	color: #666;
+	font-size: 1.2em;
 }
 
-footer a:link, footer a:active, footer a:visited {
+footer[role="contentinfo"] a:link, footer[role="contentinfo"] a:active, footer[role="contentinfo"] a:visited {
 	color: #;
 	text-decoration: none;
 }
 
-footer a:focus {
+footer[role="contentinfo"] a:focus {
 	outline: thin dotted;
 }
 
-footer a:hover {
+footer[role="contentinfo"] a:hover {
 	color: #;
 	text-decoration: underline;
 }
@@ -382,7 +360,7 @@ footer a:hover {
 }
 
 /* Hide from browsers */
-.hide {
+.hide, [hidden] {
 	display: none;
 }
 
@@ -394,9 +372,14 @@ footer a:hover {
 
 /* Hide from browsers, available to screenreaders */
 .visuallyHidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
 /* Hide from browsers & screenreaders, maintain layout */
@@ -416,8 +399,12 @@ pre, code, kbd, samp {
 	font-family: monospace, sans-serif;
 }
 
-strong, th {
+strong, b, th {
 	font-weight: bold;
+}
+
+em, i {
+	font-style: italic;
 }
 
 pre { 
@@ -438,40 +425,43 @@ pre {
 	background:#62aaf2;
 	color:#fff;
 	text-shadow: none;
-} 
+}
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+audio:not([controls]) {
+	display: none;
+}
 
 /* @end */
 
-@media all and (orientation:portrait) {
-
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
 }
 
-@media all and (orientation:landscape) {
-
-}
-
-@media screen and (max-device-width: 480px) {
-	a:link {
-		-webkit-tap-highlight-color: #;
-	} 
-	
-	/* Prevent iOS, WinMobile from adjusting font size */
-	html {
-		-webkit-text-size-adjust: none;
-		-ms-text-size-adjust: none;
-	}
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
 }
 
 @media print {
-	* {background: transparent !important; color: #444 !important; text-shadow: none !important;}
-	a, a:visited {color: #444 !important; text-decoration: underline;}
-	a:after {content: " (" attr(href) ")";} 
-	abbr:after {content: " (" attr(title) ")";}
-	.ir a:after {content: "";}  /* Don't show links for images */
-	pre, blockquote {border: 1px solid #999; page-break-inside: avoid;}
-	thead {display: table-header-group;} /* css-discuss.incutio.com/wiki/Printing_Tables */ 
-	tr, img {page-break-inside: avoid;}
-	@page {margin: 0.5cm;}
-	p, h2, h3 {orphans: 3; widows: 3;}
-	h2, h3{page-break-after: avoid;}
+	* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+	a, a:visited { text-decoration: underline; }
+	a[href]:after { content: " (" attr(href) ")"; }
+	abbr[title]:after { content: " (" attr(title) ")"; }
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; }
+	tr, img { page-break-inside: avoid; }
+	img { max-width: 100% !important; }
+	@page { margin: 0.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3 { page-break-after: avoid; }
 }

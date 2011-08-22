@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
@@ -13,92 +12,109 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<!-- /iPhone -->
+	<!-- IE -->
+	<meta name="application-name" content="Site Title">
+	<meta name="msapplication-tooltip" content="A description of this site.">
+	<meta name="msapplication-starturl" content="/?iePinned=true">
+	<!-- /IE -->
+	<!-- Facebook -->
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<!-- /Facebook -->
 	
-	<title></title>
+	<title>Barebones</title>
 	
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="author" href="humans.txt">
+	<link rel="dns-prefetch" href="//ajax.googleapis.com">
+	<link rel="sitemap" href="sitemap.xml" type="application/xml" title="Sitemap">
 	
 	<link rel="stylesheet" href="css/style.css?v=1" type="text/css">
 		
-	<script src="scripts/modernizr-1.7.min.js"></script>
+	<script src="scripts/modernizr-2.0.6.min.js"></script>
 </head>
 <body>
-	<div id="wrapper">
-		<header>
+	<header role="banner">
+		<hgroup>
 			<h1><a href="#" title="">Barebones</a></h1>
-			
-			<nav>
-				<ul>
-					<li><a href="#" title="">Home</a></li>
-					<li><a href="#" title="">About</a></li>
-					<li><a href="#" title="">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
+			<h2>HTML &amp; CSS</h2>
+		</hgroup>
 		
-		<section id="content" class="content">
-			<h2>HTML Ipsum Presents</h2>
-
-			<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-			<h3>Header Level 3</h3>
-
-			<ol>
-			   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-			   <li>Aliquam tincidunt mauris eu risus.</li>
-			</ol>
-
-			<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-
-			<h4>Header Level 4</h4>
-
+		<nav role="navigation">
 			<ul>
-			   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-			   <li>Aliquam tincidunt mauris eu risus.</li>
+				<li><a href="#" title="">Home</a></li>
+				<li><a href="#" title="">About</a></li>
+				<li><a href="#" title="">Contact</a></li>
 			</ul>
-
-			<pre><code>
-			#header h1 a { 
-				display: block; 
-				width: 300px; 
-				height: 80px; 
-			}
-			</code></pre>
-		</section>
-		
-		<aside>
-			<h2>Lorem Ipsum Stuff</h2>
-			
-			<ul>
-			   <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
-			   <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
-			   <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-			   <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-			</ul>
-		</aside>
-		
-		<footer>
-			<p>&copy; Copyright 2011 James Fleeting, All Rights Reserved.</p>
-		</footer>
-	</div> <!-- #wrapper -->
+		</nav>
+	</header>
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-	<script>!window.jQuery && document.write('<script src="scripts/jquery-1.5.2.min.js"><\/script>')</script>
+	<div class="main" role="main">
+		<h2>HTML Ipsum Presents</h2>
+
+		<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+		<h3>Header Level 3</h3>
+
+		<ol>
+		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+		   <li>Aliquam tincidunt mauris eu risus.</li>
+		</ol>
+
+		<blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</blockquote>
+
+		<h4>Header Level 4</h4>
+
+		<ul>
+		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+		   <li>Aliquam tincidunt mauris eu risus.</li>
+		</ul>
+
+		<pre><code>
+		#header h1 a { 
+			display: block; 
+			width: 300px; 
+			height: 80px; 
+		}
+		</code></pre>
+		
+		<h2>Heading Two</h2>
+		<h3>Heading Three</h3>
+		<h4>Heading Four</h4>
+		<h5>Heading Five</h5>
+		<h6>Heading Six</h6>
+	</div> <!-- #main -->
+	
+	<aside role="complementary">
+		<h2>Lorem Ipsum Stuff</h2>
+		
+		<ul>
+		   <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+		   <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+		   <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+		   <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+		</ul>
+	</aside>
+	
+	<footer role="contentinfo">
+		<p>&copy; Copyright 2011 James Fleeting, All Rights Reserved.</p>
+	</footer>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="scripts/jquery-1.6.2.min.js"><\/script>')</script>
 	<script src="scripts/common.js"></script>
-	<!--[if lt IE 9]>
-	<script src="scripts/IE9.js">IE7_PNG_SUFFIX=".png";</script>
-	<![endif]-->
 	
-	 <script>
-	   var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
-	   (function(d, t) {
-	    var g = d.createElement(t),
-	        s = d.getElementsByTagName(t)[0];
-	    g.async = true;
-	    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    s.parentNode.insertBefore(g, s);
-	   })(document, 'script');
-	  </script>
+	<script>
+	window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+	Modernizr.load({
+		load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+	});
+	</script>
+	<!--[if lt IE 7 ]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
 </body>
 </html>
