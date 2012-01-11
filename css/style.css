@@ -131,7 +131,7 @@ nav ul li a:hover {
 
 /* @end */
 
-/* @group content */
+/* @group main */
 
 [role="main"] {
 	float: left;
@@ -153,6 +153,10 @@ nav ul li a:hover {
 .main a:hover {
 	color: #;
 	text-decoration: underline;
+}
+
+.main a:active, .main a:hover {
+	outline: 0;
 }
 
 .main .huge, .main h2 {
@@ -240,6 +244,10 @@ aside a:hover {
 	text-decoration: underline;
 }
 
+aside a:active, aside a:hover {
+	outline: 0;
+}
+
 aside h2 {
 	font-size: 2.3em;
 	padding: 5px 0 10px;
@@ -302,6 +310,21 @@ aside li li {
 
 /* @group forms */
 
+form {
+	margin: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
 label, input[type=button], input[type=submit], button {
 	cursor: pointer;
 }
@@ -316,6 +339,12 @@ input[type="checkbox"] {
 
 .ie7 input[type="checkbox"] {
 	vertical-align: baseline;
+}
+
+textarea { 
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;	
 }
 
 /* @end */
@@ -382,6 +411,17 @@ footer[role="contentinfo"] a:hover {
 	width: 1px;
 }
 
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { 
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+
 /* Hide from browsers & screenreaders, maintain layout */
 .invisible { 
 	visibility: hidden;
@@ -396,7 +436,8 @@ footer[role="contentinfo"] a:hover {
 }
 
 pre, code, kbd, samp {
-	font-family: monospace, sans-serif;
+	font-family: monospace, serif;
+	_font-family: 'courier new', monospace;
 }
 
 strong, b, th {
@@ -411,7 +452,6 @@ pre {
   padding: 15px; 
   white-space: pre; /* CSS2 */
   white-space: pre-wrap; /* CSS 2.1 */
-  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
   word-wrap: break-word; /* IE */
 }
 
@@ -437,6 +477,12 @@ svg:not(:root) {
 	overflow: hidden;
 }
 
+audio, canvas, video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
 audio:not([controls]) {
 	display: none;
 }
@@ -452,7 +498,7 @@ audio:not([controls]) {
 }
 
 @media print {
-	* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+	* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
 	a, a:visited { text-decoration: underline; }
 	a[href]:after { content: " (" attr(href) ")"; }
 	abbr[title]:after { content: " (" attr(title) ")"; }
