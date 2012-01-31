@@ -63,6 +63,13 @@ body {
 	margin: 0 auto;
 }
 
+.chromeframe {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: black;
+	padding: 0.2em 0;
+}
+
 /* @end */
 
 /* @group header */
@@ -327,6 +334,10 @@ legend {
 
 label, input[type=button], input[type=submit], button {
 	cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+	cursor: default;
 }
 
 input[type="radio"] {
