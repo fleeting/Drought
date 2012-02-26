@@ -1,0 +1,258 @@
+@import "normalize.less";
+@import "mixins.less";
+
+/* variables */
+@bgColor: #f1f1f1;
+@textColor: #333;
+@linkColor: #049cdb;
+@linkColorHover: darken(@linkColor, 15%);
+
+/* structure */
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	color: @textColor;
+}
+
+body {
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.chromeframe {
+	background: darken(@bgColor, 25%);
+	color: @textColor;
+	margin: 0.2em 0;
+	padding: 0.5em;
+	.border-radius();
+}
+
+/* typography */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
+
+/* header */
+
+[role="banner"] {
+	width: 100%;
+	margin: 35px 0;
+
+	h1 a:link, h1 a:active, h1 a:visited {
+		color: @linkColor;
+		.text-shadow(2px, 2px, 1px, #ccc);
+		text-decoration: none;
+	}
+
+	h1 a:hover {
+		color: @linkColorHover;
+		text-decoration: underline;
+	}
+}
+
+/* nav */
+
+nav {
+	overflow: hidden;
+
+	ul, ol {
+		float: left;
+		width: 100%;
+		padding: 0;
+		list-style: none;
+		list-style-image: none;
+	}
+
+	ul li {
+		display: inline;
+	}
+
+	ul li a:link, ul li a:visited, ul li a:active {
+		float: left;
+		display: block;
+		margin-left: px;
+		padding: px;
+		color: @linkColor;
+		background: #;
+		text-decoration: none;
+	}
+
+	ul li:first-child a {
+		margin-left: 0;
+	}
+
+	ul li a:hover {
+		color: @linkColorHover;
+		text-decoration: underline;
+	}
+}
+
+/* main */
+
+[role="main"] {
+	float: left;
+	display: inline;
+	width: 620px;
+	margin-left: 10px;
+
+	a:link, a:active, a:visited {
+		color: @linkColor;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: @linkColorHover;
+		text-decoration: underline;
+	}
+}
+
+/* sidebar */
+
+[role="complementary"] {
+	float: right;
+	display: inline;
+	width: 300px;
+	font-size: .95em;
+	margin-right: 10px;
+
+	a:link, a:active, a:visited {
+		color: @linkColor;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: @linkColorHover;
+		text-decoration: underline;
+	}
+}
+
+/* footer */
+
+[role="contentinfo"] {
+	clear: both;
+	float: left;
+	display: inline;
+	margin: 25px 0;
+
+	p {
+		color: lighten(@textColor, 40%);
+		font-size: 0.8em;
+	}
+
+	a:link, a:active, a:visited {
+		color: @linkColor;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: @linkColorHover;
+		text-decoration: underline;
+	}
+}
+
+/* misc */
+
+/* Hide from browsers */
+.hide, [hidden] {
+	display: none;
+}
+
+/* Hide from browsers & screenreaders */
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+/* Hide from browsers, available to screenreaders */
+.visuallyHidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { 
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/* Hide from browsers & screenreaders, maintain layout */
+.invisible { 
+	visibility: hidden;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+::-moz-selection {
+	background: #62aaf2;
+	color:#fff;
+	text-shadow: none;
+}
+
+::selection {
+	background:#62aaf2;
+	color:#fff;
+	text-shadow: none;
+}
+
+@media print {
+	* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+	a, a:visited { text-decoration: underline; }
+	a[href]:after { content: " (" attr(href) ")"; }
+	abbr[title]:after { content: " (" attr(title) ")"; }
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; }
+	tr, img { page-break-inside: avoid; }
+	img { max-width: 100% !important; }
+	@page { margin: 0.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3 { page-break-after: avoid; }
+}
