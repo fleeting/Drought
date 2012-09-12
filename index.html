@@ -28,25 +28,29 @@
 	<link rel="author" href="humans.txt">
 	<link rel="dns-prefetch" href="//ajax.googleapis.com">
 	<link rel="sitemap" href="sitemap.xml" type="application/xml" title="Sitemap">
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed/">
+
+	<!-- Remove if you have a favicon.ico in your root dir -->
+	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=">
 	
 	<link rel="stylesheet" href="css/style.css?v=1">
 		
 	<script src="js/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
+<body class="holmes-debug">
 	<!--[if lt IE 7 ]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 	
 	<header role="banner">
 		<hgroup>
-			<h1><a href="#" title="">Drought</a></h1>
+			<h1><a href="/" title="Drought | HTML &amp; CSS Barbones">Drought</a></h1>
 			<h2>HTML &amp; CSS Barebones</h2>
 		</hgroup>
 		
 		<nav role="navigation">
 			<ul>
-				<li><a href="#" title="">Home</a></li>
-				<li><a href="#" title="">About</a></li>
-				<li><a href="#" title="">Contact</a></li>
+				<li><a href="/" title="Drought">Home</a></li>
+				<li><a href="/" title="About">About</a></li>
+				<li><a href="/" title="Contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -96,9 +100,9 @@
 			<fieldset>
 				<legend>This is known as a form.</legend>
 				
-				<p><label for="">Your Name <input type="text" name=""></label></p>
-				<p><label for="">Your Email <input type="text" name=""></label></p>
-				<p><label for="">Your Comments <textarea name=""></textarea></label></p>
+				<p><label for="form-name">Your Name <input type="text" name="name" id="form-name"></label></p>
+				<p><label for="form-email">Your Email <input type="text" name="email" id="form-email"></label></p>
+				<p><label for="form-comments">Your Comments <textarea name="comments" id="form-comments"></textarea></label></p>
 				<p><input type="submit" value="Submit"></p>
 			</fieldset>
 		</form>
