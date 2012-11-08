@@ -8,7 +8,7 @@
 
 # THANKS
 
-    <name>
+    H5BP - http://html5boilerplate.com/
 
 # TECHNOLOGY COLOPHON
 

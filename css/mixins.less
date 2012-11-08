@@ -11,27 +11,22 @@
 	}
 }
 
-.size(@width: 5px, @height: 5px) {
+.size(@width, @height) {
 	width: @width;
 	height: @height;
 }
 
 /* CSS3 Properties */
-.border-radius(@radius: 5px) {
+.border-radius(@radius) {
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
 	border-radius: @radius;
 }
 
-.box-shadow(@shadow: 0 1px 3px rgba(0, 0, 0, .25)) {
+.box-shadow(@shadow) {
 	-webkit-box-shadow: @shadow;
 	-moz-box-shadow: @shadow;
 	box-shadow: @shadow;
-}
-
-.text-shadow(@x: 1px, @y: 1px, @blur: 2px, @color: #333) {
-	text-shadow: @x @y @blur @color;
-	filter: dropshadow(color=@color, offx=@x, offy=@y);
 }
 
 .transition(@transition) {
@@ -58,7 +53,7 @@
 	transform: scale(@ratio);
 }
 
-.translate(@x: 0, @y: 0) {
+.translate(@x, @y) {
 	-webkit-transform: translate(@x, @y);
 	-moz-transform: translate(@x, @y);
 	-ms-transform: translate(@x, @y);
@@ -66,7 +61,7 @@
 	transform: translate(@x, @y);
 }
 
-.skew(@x: 0, @y: 0) {
+.skew(@x, @y) {
 	-webkit-transform: skew(@x, @y);
 	-moz-transform: skew(@x, @y);
 	-ms-transform: skew(@x, @y);
@@ -74,7 +69,7 @@
 	transform: skew(@x, @y);
 }
 
-.translate3d(@x: 0, @y: 0, @z: 0) {
+.translate3d(@x, @y, @z) {
 	-webkit-transform: translate(@x, @y, @z);
 	-moz-transform: translate(@x, @y, @z);
 	-ms-transform: translate(@x, @y, @z);
@@ -108,7 +103,7 @@
 	user-select: @select;
 }
 
-.resizable(@direction: both) {
+.resizable(@direction) {
 	resize: @direction; // Options: horizontal, vertical, both
 	overflow: auto; // Safari fix
 }
@@ -122,7 +117,7 @@
 	column-gap: @columnGap;
 }
 
-.opacity(@opacity: 100) {
+.opacity(@opacity) {
 	opacity: @opacity / 100;
 	filter: e(%("alpha(opacity=%d)", @opacity));
 }

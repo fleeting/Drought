@@ -1,11 +1,11 @@
-@import "normalize.less";
-@import "mixins.less";
+@import "normalize";
+@import "mixins";
 
 /* variables */
 @bgColor: #f1f1f1;
 @textColor: #333;
 @linkColor: #049cdb;
-@linkColorHover: darken(@linkColor, 15%);
+@linkColorHover: darken(@linkColor, 05%);
 
 /* structure */
 
@@ -53,8 +53,8 @@ hr {
 /* typography */
 
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+	font-size: 3.5em;
+	margin: 0.5em 0;
 }
 
 h2 {
@@ -82,7 +82,7 @@ h6 {
 	margin: 2.33em 0;
 }
 
-a:link, a:active, a:visited {
+a {
 	color: @linkColor;
 	text-decoration: none;
 }
@@ -98,9 +98,8 @@ a:hover {
 	width: 100%;
 	margin: 35px 0;
 
-	h1 a:link, h1 a:active, h1 a:visited {
+	h1 a {
 		color: @linkColor;
-		.text-shadow(2px, 2px, 1px, #ccc);
 		text-decoration: none;
 	}
 
@@ -115,7 +114,8 @@ a:hover {
 nav {
 	overflow: hidden;
 
-	ul, ol {
+	ul,
+	ol {
 		float: left;
 		width: 100%;
 		padding: 0;
@@ -127,7 +127,7 @@ nav {
 		display: inline;
 	}
 
-	ul li a:link, ul li a:visited, ul li a:active {
+	ul li a {
 		float: left;
 		display: block;
 		margin-left: px;
@@ -242,7 +242,7 @@ nav {
 }
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { 
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
 	clip: auto;
 	height: auto;
 	margin: 0;
@@ -252,7 +252,7 @@ nav {
 }
 
 /* Hide from browsers & screenreaders, maintain layout */
-.invisible { 
+.invisible {
 	visibility: hidden;
 }
 
@@ -290,4 +290,4 @@ nav {
 	h2, h3 { page-break-after: avoid; }
 }
 
-@import "formalize.less";
+@import "formalize";
