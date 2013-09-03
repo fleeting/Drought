@@ -26,98 +26,92 @@
 
 	<link rel="stylesheet" href="css/style.css?v=1">
 
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/custom.modernizr.js"></script>
 </head>
 <body>
 	<!--[if lt IE 7 ]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
 
-	<header role="banner">
-		<h1><a href="/" title="Drought | HTML &amp; CSS Barbones">Drought</a></h1>
-		<h2>HTML &amp; CSS Barebones</h2>
-
-		<nav role="navigation">
-			<ul>
-				<li><a href="/" title="Drought">Home</a></li>
-				<li><a href="/" title="About">About</a></li>
-				<li><a href="/" title="Contact">Contact</a></li>
-			</ul>
-		</nav>
+	<header role="banner" class="row">
+		<div class="large-12 columns">
+			<h2>Welcome to Foundation</h2>
+			<p>This is version 4.3.1.</p>
+			<hr />
+		</div>
 	</header>
 
-	<div class="main" role="main">
-		<h2>Meet Drought</h2>
+	<div class="row">
+		<div class="large-8 columns">
+			<h3>The Grid</h3>
 
-		<p><strong>Drought</strong> is a HTML &amp; CSS barebones, boilerplate, framework or whatever else you want to call it. Why introduce another HTML/CSS project like this? There are so many boilerplates/frameworks out there but this is what works for me when starting a new site. Many of the great things here have come from other boilerplates including <a href="http://html5boilerplate.com/" title="HTML5 Boilerplate">H5BP</a>. I wanted something a little more then a boilerplate and something that grow about from writing the same code over and over. The major addition being that this project includes CSS for a two column web site with a header and footer. A lot of the sites we do fit this style and this starting point lets me then easily change the width of each column and get started on the unique styling for the site instead of having to get the barebones structure/layout out of the way first.</p>
+			<!-- Grid Example -->
+			<div class="row">
+				<div class="large-12 columns">
+					<div class="panel">
+						<p>This is a twelve column section in a row. Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-6 columns">
+					<div class="panel">
+						<p>Six columns</p>
+					</div>
+				</div>
+				<div class="large-6 columns">
+					<div class="panel">
+						<p>Six columns</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-4 columns">
+					<div class="panel">
+						<p>Four columns</p>
+					</div>
+				</div>
+				<div class="large-4 columns">
+					<div class="panel">
+						<p>Four columns</p>
+					</div>
+				</div>
+				<div class="large-4 columns">
+					<div class="panel">
+						<p>Four columns</p>
+					</div>
+				</div>
+			</div>
 
-		<p>This project will most likely not be right for you or your work flow. I believe that everybody should have their own boilerplate/framework to start projects with. It keeps from coding the same stuff over and over and helps you get started faster on your project and allows you to have some guidelines to follow. I don't expect this project to work for you but I hope you get inspiration to create your own or take pieces from here that do work.</p>
+			<h3>Buttons</h3>
 
-		<h3>HTML Ipsum Presents</h3>
+	  <div class="row">
+		<div class="large-6 columns">
+		  <p><a href="#" class="small button">Small Button</a></p>
+		  <p><a href="#" class="button">Medium Button</a></p>
+		  <p><a href="#" class="large button">Large Button</a></p>
+		</div>
+		<div class="large-6 columns">
+		  <p><a href="#" class="small alert button">Small Alert Button</a></p>
+		  <p><a href="#" class="success button">Medium Success Button</a></p>
+		  <p><a href="#" class="large secondary button">Large Secondary Button</a></p>
+		</div>
+	  </div>
+		</div>
 
-		<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+		<div class="large-4 columns">
+			<h4>Getting Started</h4>
+			<p>We're stoked you want to try Foundation! To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
 
-		<h3>Header Level 3</h3>
+			<h4>Other Resources</h4>
+			<p>Once you've exhausted the fun in this document, you should check out:</p>
+			<ul class="disc">
+				<li><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</li>
+				<li><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</li>
+				<li><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</li>
+			</ul>
+		</div>
+	</div>
 
-		<ol>
-			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-			<li>Aliquam tincidunt mauris eu risus.</li>
-		</ol>
-
-		<blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</blockquote>
-
-		<h4>Header Level 4</h4>
-
-		<ul>
-			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-			<li>Aliquam tincidunt mauris eu risus.</li>
-		</ul>
-
-		<pre><code>
-		#header h1 a {
-			display: block;
-			width: 300px;
-			height: 80px;
-		}
-		</code></pre>
-
-		<h2>Heading Two</h2>
-		<h3>Heading Three</h3>
-		<h4>Heading Four</h4>
-		<h5>Heading Five</h5>
-		<h6>Heading Six</h6>
-
-		<form>
-			<fieldset>
-				<legend>This is known as a form.</legend>
-
-				<p><label for="form-name">Your Name <input type="text" name="name" id="form-name"></label></p>
-				<p><label for="form-email">Your Email <input type="text" name="email" id="form-email"></label></p>
-				<p><label for="form-comments">Your Comments <textarea name="comments" id="form-comments"></textarea></label></p>
-				<p><input type="submit" value="Submit"></p>
-			</fieldset>
-		</form>
-	</div> <!-- #main -->
-
-	<aside role="complementary">
-		<h3>Lorem Ipsum Stuff</h3>
-
-		<ul>
-			<li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
-			<li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
-			<li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-			<li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-		</ul>
-	</aside>
-
-	<footer role="contentinfo">
-		<p>&copy; Copyright 2013 <a href="http://jamesfleeting.com" title="James Fleeting">James Fleeting</a>, All Rights Reserved.</p>
-	</footer>
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-2.0.3.min.js"><\/script>')</script>
-	<!-- Don't forget to concatenate and minify! -->
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
-
+	<script src="js/app.js"></script>
 	<script>
 		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
