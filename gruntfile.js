@@ -4,6 +4,14 @@
   module.exports = function(grunt) {
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
+      notify: {
+        watch: {
+          options: {
+            title: 'Who watches the watchmen?',
+            message: 'grunt tasks: jshint, concat, uglify, sass'
+          }
+        }
+      },
       concat: {
         options: {
           separator: ';',
@@ -57,7 +65,7 @@
       },
       watch: {
         files: ['<%= jshint.files %>', 'css/style.scss', 'js/main.js', 'css/foundation/*.scss'],
-        tasks: ['jshint', 'concat', 'uglify', 'sass']
+        tasks: ['jshint', 'concat', 'uglify', 'sass', 'notify']
       }
     });
 
@@ -68,8 +76,9 @@
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-devtools');
+    grunt.loadNpmTasks('grunt-notify');
 
     // Register the default tasks
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass']);
+    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'watch']);
   };
 }());
