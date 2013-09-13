@@ -9,6 +9,7 @@
     "grunt-contrib-watch": "latest",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-sass": "latest",
+    "grunt-contrib-imagemin": "latest",
     "grunt-notify": "latest",
     "grunt-devtools": "latest"
   }
