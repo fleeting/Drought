@@ -2,7 +2,7 @@
 @mixin clearfix() {
   &:before,
   &:after {
-	  content: " ";
+    content: " ";
     display: table;
   }
   &:after {
@@ -11,117 +11,117 @@
 }
 
 @mixin size($width, $height) {
-	width: $width;
-	height: $height;
+  width: $width;
+  height: $height;
 }
 
 @mixin opacity($opacity) {
-	filter: alpha(opacity=($opacity * 100));
-	-moz-opacity: $opacity;
-	opacity: $opacity;
+  filter: alpha(opacity=($opacity * 100));
+  -moz-opacity: $opacity;
+  opacity: $opacity;
 }
 
 @mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
 }
 
 @mixin box-shadow($shadow) {
-	-webkit-box-shadow: $shadow;
-	-moz-box-shadow: $shadow;
-	box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
 }
 
 @mixin text-shadow($shadow) {
-	text-shadow: $shadow;
+  text-shadow: $shadow;
 }
 
 @mixin transition($transition) {
-	-webkit-transition: $transition;
-	-moz-transition: $transition;
-	-ms-transition: $transition;
-	-o-transition: $transition;
-	transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
 }
 
 @mixin rotate($degrees) {
-	-webkit-transform: rotate($degrees);
-	-moz-transform: rotate($degrees);
-	-ms-transform: rotate($degrees);
-	-o-transform: rotate($degrees);
-	transform: rotate($degrees);
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
 }
 
 @mixin scale($ratio) {
-	-webkit-transform: scale($ratio);
-	-moz-transform: scale($ratio);
-	-ms-transform: scale($ratio);
-	-o-transform: scale($ratio);
-	transform: scale($ratio);
+  -webkit-transform: scale($ratio);
+  -moz-transform: scale($ratio);
+  -ms-transform: scale($ratio);
+  -o-transform: scale($ratio);
+  transform: scale($ratio);
 }
 
 @mixin translate($x, $y) {
-	-webkit-transform: translate($x, $y);
-	-moz-transform: translate($x, $y);
-	-ms-transform: translate($x, $y);
-	-o-transform: translate($x, $y);
-	transform: translate($x, $y);
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
 }
 
 @mixin skew($x, $y) {
-	-webkit-transform: skew($x, $y);
-	-moz-transform: skew($x, $y);
-	-ms-transform: skew($x, $y);
-	-o-transform: skew($x, $y);
-	transform: skew($x, $y);
+  -webkit-transform: skew($x, $y);
+  -moz-transform: skew($x, $y);
+  -ms-transform: skew($x, $y);
+  -o-transform: skew($x, $y);
+  transform: skew($x, $y);
 }
 
 @mixin translate3d($x, $y, $z) {
-	-webkit-transform: translate($x, $y, $z);
-	-moz-transform: translate($x, $y, $z);
-	-ms-transform: translate($x, $y, $z);
-	-o-transform: translate($x, $y, $z);
-	transform: translate($x, $y, $z);
+  -webkit-transform: translate($x, $y, $z);
+  -moz-transform: translate($x, $y, $z);
+  -ms-transform: translate($x, $y, $z);
+  -o-transform: translate($x, $y, $z);
+  transform: translate($x, $y, $z);
 }
 
 @mixin background-clip($clip) {
-	-webkit-background-clip: $clip;
-	-moz-background-clip: $clip;
-	background-clip: $clip;
+  -webkit-background-clip: $clip;
+  -moz-background-clip: $clip;
+  background-clip: $clip;
 }
 
 @mixin background-size($size) {
-	-webkit-background-size: $size;
-	-moz-background-size: $size;
-	-o-background-size: $size;
-	background-size: $size;
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  -o-background-size: $size;
+  background-size: $size;
 }
 
 @mixin box-sizing($boxmodel) {
-	-webkit-box-sizing: $boxmodel;
-	-moz-box-sizing: $boxmodel;
-	box-sizing: $boxmodel;
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
 }
 
 @mixin user-select($select) {
-	-webkit-user-select: $select;
-	-moz-user-select: $select;
-	-o-user-select: $select;
-	user-select: $select;
+  -webkit-user-select: $select;
+  -moz-user-select: $select;
+  -o-user-select: $select;
+  user-select: $select;
 }
 
 @mixin font-face($font-family, $file-path, $font-weight: normal, $font-style: normal) {
-	@font-face {
-		font-family: $font-family;
-		font-weight: $font-weight;
-		font-style: $font-style;
-		src: url('#{$file-path}.eot');
-  	src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
-			url('#{$file-path}.woff') format('woff'),
-			url('#{$file-path}.ttf') format('truetype'),
-			url('#{$file-path}.svg##{$file-family}') format('svg');
-	}
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+      url('#{$file-path}.woff') format('woff'),
+      url('#{$file-path}.ttf') format('truetype'),
+      url('#{$file-path}.svg##{$file-family}') format('svg');
+  }
 }
 
 @mixin image-2x($image, $width, $height) {
@@ -136,13 +136,10 @@
 }
 
 /* Functions */
-
-// Add percentage of white to a color
 @function tint($color, $percent){
   @return mix(white, $color, $percent);
 }
 
-// Add percentage of black to a color
 @function shade($color, $percent){
   @return mix(black, $color, $percent);
 }
