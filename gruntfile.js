@@ -80,6 +80,6 @@
     grunt.loadNpmTasks('grunt-notify');
 
     // Register the default tasks
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'watch']);
+    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'notify']);
   };
 }());
