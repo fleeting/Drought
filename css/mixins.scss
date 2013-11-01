@@ -135,6 +135,17 @@
   }
 }
 
+@mixin linear-horizontal-gradient($startcolor, $startpercent, $stopcolor, $stoppercent) {
+  background: $startcolor;
+  background: -moz-linear-gradient(top, $startcolor $startpercent, $stopcolor $stoppercent); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop($startpercent,$startcolor), color-stop($stoppercent,$stopcolor)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $startcolor $startpercent,$stopcolor $stoppercent); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $startcolor $startpercent,$stopcolor $stoppercent); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $startcolor $startpercent,$stopcolor $stoppercent); /* IE10+ */
+  background: linear-gradient(to bottom, $startcolor $startpercent,$stopcolor $stoppercent); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#{$startcolor}, endColorstr=#{$stopcolor},GradientType=0 ); /* IE6-9 */
+}
+
 /* Functions */
 @function tint($color, $percent){
   @return mix(white, $color, $percent);
