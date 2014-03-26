@@ -147,10 +147,10 @@
 }
 
 /* Functions */
-@function tint($color, $percent){
-  @return lighten(white, $color, $percent);
+@function lighten($color, $percent){
+  @return tint(white, $color, $percent);
 }
 
-@function shade($color, $percent){
-  @return darken(black, $color, $percent);
+@function darken($color, $percent){
+  @return shade(black, $color, $percent);
 }
