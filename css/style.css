@@ -1,3 +1,4 @@
+/* Media Queries */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -398,7 +399,7 @@ th {
 /* Functions */
 /* Structure */
 .container {
-  max-width: 100%;
+  max-width: 64.063em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -408,6 +409,18 @@ th {
   clear: both;
 }
 
+@media only screen and (max-width: 40em) {
+  .container {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
 /* Header */
 /* Main */
 [role="main"] {
@@ -416,6 +429,14 @@ th {
   margin-right: 1.69492%;
 }
 
+@media only screen and (max-width: 40em) {
+  [role="main"] {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 /* Sidebar */
 [role="complementary"] {
   width: 23.72881%;
@@ -423,6 +444,14 @@ th {
   margin-right: 0;
 }
 
+@media only screen and (max-width: 40em) {
+  [role="complementary"] {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 /* Footer */
 /* Helper Classes */
 .pull-left {
@@ -491,13 +520,11 @@ th {
 }
 
 /* Clearfix: contain floats */
-.clearfix:before,
-.clearfix:after {
+.cf:before, .cf:after {
   content: " ";
   display: table;
 }
-
-.clearfix:after {
+.cf:after {
   clear: both;
 }
 

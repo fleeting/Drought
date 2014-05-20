@@ -2,9 +2,16 @@ $susy: (
   columns: 12,
 );
 
-@import "normalize";
-@import "mixins";
-@import "_susy";
+/* Media Queries */
+$bpSmall: 'only screen and (max-width: 40em)';
+$bpMedium: 'only screen and (min-width: 40.063em)';
+$bpLarge: 'only screen and (min-width: 64.063em)';
+$bpXLarge: 'only screen and (min-width: 90.063em)';
+$bpXXLarge: 'only screen and (min-width: 120.063em)';
+
+@import 'normalize';
+@import 'mixins';
+@import '_susy';
 
 /* Structure */
 body {
@@ -12,7 +19,13 @@ body {
 }
 
 .container {
-  @include container;
+  @include container(64.063em);
+}
+
+@media #{$bpSmall} {
+  .container {
+    @include container(40em);
+  }
 }
 
 /* Header */
@@ -25,9 +38,21 @@ body {
   @include span(9 of 12);
 }
 
+@media #{$bpSmall} {
+  [role="main"] {
+    @include span(12 of 12);
+  }
+}
+
 /* Sidebar */
 [role="complementary"] {
   @include span(3 of 12 last);
+}
+
+@media #{$bpSmall} {
+  [role="complementary"] {
+    @include span(12 of 12);
+  }
 }
 
 /* Footer */
@@ -99,14 +124,8 @@ body {
 }
 
 /* Clearfix: contain floats */
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
+.cf {
+  @include clearfix();
 }
 
 ::-moz-selection {
