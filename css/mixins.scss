@@ -111,6 +111,31 @@
   user-select: $select;
 }
 
+@mixin triangle($direction: 'up', $size: 6px, $color: #333){
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  content: '';
+  @if ($direction == 'up'){
+    border-bottom: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+  } @else if ($direction == 'down'){
+    border-top: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+  } @else if ($direction == 'left'){
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-right: $size solid $color;
+  } @else if ($direction == 'right'){
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-left: $size solid $color;
+  }
+}
+
 @mixin font-face($font-family, $file-path, $font-weight: normal, $font-style: normal) {
   @font-face {
     font-family: $font-family;
