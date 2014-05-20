@@ -397,9 +397,32 @@ th {
 /* Snippets */
 /* Functions */
 /* Structure */
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 /* Header */
 /* Main */
+[role="main"] {
+  width: 74.57627%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
 /* Sidebar */
+[role="complementary"] {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+}
+
 /* Footer */
 /* Helper Classes */
 .pull-left {

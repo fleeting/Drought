@@ -1,8 +1,19 @@
+$susy: (
+  columns: 12,
+);
+
 @import "normalize";
 @import "mixins";
+@import "_susy";
 
 /* Structure */
+body {
 
+}
+
+.container {
+  @include container;
+}
 
 /* Header */
 [role="banner"] {
@@ -11,12 +22,12 @@
 
 /* Main */
 [role="main"] {
-
+  @include span(9 of 12);
 }
 
 /* Sidebar */
 [role="complementary"] {
-
+  @include span(3 of 12 last);
 }
 
 /* Footer */
