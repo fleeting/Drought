@@ -1,35 +1,30 @@
 @import "normalize";
 @import "mixins";
-@import "foundation";
 
-/* structure */
+/* Structure */
 
-.chromeframe {
-  margin: 0.2em 0;
-  padding: 0.2em 0;
-}
 
-/* header */
+/* Header */
 [role="banner"] {
 
 }
 
-/* main */
+/* Main */
 [role="main"] {
 
 }
 
-/* sidebar */
+/* Sidebar */
 [role="complementary"] {
 
 }
 
-/* footer */
+/* Footer */
 [role="contentinfo"] {
 
 }
 
-/* misc */
+/* Helper Classes */
 
 .pull-left {
   float: left;
@@ -90,6 +85,17 @@
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+}
+
+/* Clearfix: contain floats */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
 }
 
 ::-moz-selection {

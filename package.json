@@ -1,16 +1,23 @@
 {
   "name": "Drought",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-uglify": "latest",
-    "grunt-contrib-jshint": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-contrib-concat": "latest",
-    "grunt-contrib-sass": "latest",
-    "grunt-contrib-imagemin": "latest",
-    "grunt-notify": "latest",
-    "grunt-devtools": "latest"
-  }
+  "version": "3.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-ruby-sass": "latest",
+    "gulp-concat": "latest",
+    "gulp-uglify": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-jshint": "latest",
+    "jshint-stylish": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-rename": "latest",
+    "gulp-size": "latest",
+    "gulp-notify": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fleeting/Drought.git"
+  },
+  "author": "James Fleeting"
 }
