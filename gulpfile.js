@@ -15,7 +15,7 @@ var paths = {
   scripts: ['./js/main.js']
 };
 
-gulp.task('styles', function () {
+gulp.task('styles', ['components'], function () {
   gulp.src(paths.styles)
     .pipe(sass({ style: 'expanded' })) // Add source maps after figuring out minify issue
     .pipe(gulp.dest('./css/'))
@@ -26,10 +26,10 @@ gulp.task('styles', function () {
     .pipe(notify({ message: 'Styles task complete.' }));
 });
 
-gulp.task('lint', function () {
-  return gulp.src('./js/main.js')
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('jshint-stylish'));
+gulp.task('components', function() {
+  return gulp.src(['./bower_components/normalize.css/normalize.css'])
+  .pipe(rename('_normalize.scss'))
+  .pipe(gulp.dest('./bower_components/normalize.css/'));
 });
 
 gulp.task('scripts', ['lint'], function() {
@@ -41,6 +41,12 @@ gulp.task('scripts', ['lint'], function() {
     .pipe(size())
     .pipe(gulp.dest('./js/'))
     .pipe(notify({ message: 'Scripts task complete.' }));
+});
+
+gulp.task('lint', function () {
+  return gulp.src('./js/main.js')
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('jshint-stylish'));
 });
 
 // Rerun the task when a file changes

@@ -9,9 +9,9 @@ $bpLarge: 'only screen and (min-width: 64.063em)';
 $bpXLarge: 'only screen and (min-width: 90.063em)';
 $bpXXLarge: 'only screen and (min-width: 120.063em)';
 
-@import 'normalize';
+@import '../bower_components/normalize.css/_normalize';
 @import 'mixins';
-@import '_susy';
+@import '../bower_components/susy/sass/_susy';
 
 /* Structure */
 body {

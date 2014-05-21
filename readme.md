@@ -2,7 +2,10 @@
 
 Drought is a HTML &amp; CSS Barebones project. It comes packed with lots of great tools to get you started including the standards from H5BP. It also includes a typical HTML structure and basic CSS that I tend to always start with. This has grown over the past several years from just a few snippets that I used often to what you see. I have adapted so many great things from other boilerplates and added what works for me. Feel free to take what you want from it or get inspired to create your own.
 
-Get started by doing a quick git clone, `git clone git@github.com:jamesfleeting/Drought.git`, or [downloading the latest release](https://github.com/jamesfleeting/Drought/archive/master.zip). I'm constantly tweaking this project so if you are interested in that sort of stuff check out the `wip` branch, if there is one right now.
+## Get Started
+**Requirements include node.js, bower, and gulp.**
+
+Get started by doing a quick git clone, `git clone git@github.com:jamesfleeting/Drought.git`, or [downloading the latest release](https://github.com/jamesfleeting/Drought/archive/master.zip). Then simply run `bower install && gulp` to get any assets and compile.
 
 ## Problem?
 

@@ -1,0 +1,9 @@
+{
+  "name": "Drought",
+  "version": "3.0.0",
+  "dependencies": {
+    "jquery": "latest",
+    "susy": "latest",
+    "normalize.css": "latest"
+  }
+}
