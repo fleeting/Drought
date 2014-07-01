@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     size = require('gulp-size'),
-    notify = require('gulp-notify'),
     pkg = require('./package.json');
 
 var paths = {
@@ -22,8 +21,7 @@ gulp.task('styles', ['components'], function () {
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifyCSS())
     .pipe(size())
-    .pipe(gulp.dest('./css/'))
-    .pipe(notify({ message: 'Styles task complete.' }));
+    .pipe(gulp.dest('./css/'));
 });
 
 gulp.task('components', function() {
@@ -39,8 +37,7 @@ gulp.task('scripts', ['lint'], function() {
     .pipe(rename('app.min.js'))
     .pipe(uglify({ preserveComments: 'some' }))
     .pipe(size())
-    .pipe(gulp.dest('./js/'))
-    .pipe(notify({ message: 'Scripts task complete.' }));
+    .pipe(gulp.dest('./js/'));
 });
 
 gulp.task('lint', function () {

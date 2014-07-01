@@ -5,7 +5,7 @@ Drought is a HTML &amp; CSS Barebones project. It comes packed with lots of grea
 ## Get Started
 **Requirements include node.js, bower, and gulp.**
 
-Get started by doing a quick git clone, `git clone git@github.com:jamesfleeting/Drought.git`, or [downloading the latest release](https://github.com/jamesfleeting/Drought/archive/master.zip). Then simply run `bower install && gulp` to get any assets and compile.
+Get started by doing a quick git clone, `git clone git@github.com:jamesfleeting/Drought.git`, or [downloading the latest release](https://github.com/jamesfleeting/Drought/archive/master.zip). Then simply run `npm install & bower install && gulp` to get any assets and compile.
 
 ## Problem?
 

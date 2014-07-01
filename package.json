@@ -1,6 +1,6 @@
 {
   "name": "Drought",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "dependencies": {},
   "devDependencies": {
     "gulp": "latest",
@@ -12,8 +12,7 @@
     "jshint-stylish": "latest",
     "gulp-imagemin": "latest",
     "gulp-rename": "latest",
-    "gulp-size": "latest",
-    "gulp-notify": "latest"
+    "gulp-size": "latest"
   },
   "repository": {
     "type": "git",
